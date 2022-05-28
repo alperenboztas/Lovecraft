@@ -9,21 +9,17 @@ p, h2{
     color: white;
 }
 
-div {
-    position: fixed;
-}
 
 .navbar {
     
     display: flex;
     justify-content: space-between;
-    
-    
+    align-items: center;
     padding: 10px;
     position: relative;
 }
 
-.navbar, a {
+.navbar a {
     /* background-color: rgb(125, 67, 67); */
     color: white;
     text-decoration: none;
@@ -34,11 +30,15 @@ div {
     
 }
 
-
+.life {
+    position: absolute;
+}
+/*fixed : radius */
 a {
     transition-property: background-color;
     transition-duration: 0.8s;
     transition-delay: 0.2s;
+    border-radius: 6px;
 }
 a:hover {
     background-color: brown;
@@ -51,11 +51,9 @@ a:hover {
 
 .raven {
     background-color: brown;
-   
     height: 50px;
     width: auto;
     cursor: pointer;
-    
     
 }
 
@@ -82,7 +80,7 @@ display: block;
 }
 
 .book {
-    width: 95px;
+    width: 15%;
     cursor: pointer;
     transition-property: margin;
     transition-duration: 1.2s;
@@ -92,11 +90,18 @@ display: block;
 
 
 .books {
-display: block;
+position: absolute;
+display: flex;
+/* justify ve align için display flex olması gerekmektedir. */
 justify-content: center;
+flex-direction: column;
 align-items: center;
-padding-left: 115px;
-margin-left: 50px;
+width: 50vw;
+}
+
+.books .books__images__content {
+    display: flex;
+    justify-content: center;
 }
 
 .column {
