@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+
+    /* üst ve alttan 10px sağ ve soldan 0px olarak margin değeri ver anlamında. */ 
+    margin: 10px 0; 
+}
+
+.story {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.story .content {
+    letter-spacing: 0.2px;
+    width: 80%;
+}
+
+p, h2{
+    color: white;
+}
+
+div {
+    position: fixed;
+}
+
+.navbar {
+    display: flex;
+    
+    /* Navbar kullanımı UX olarak zor görünüyordu. Navlinklerin birbirine daha yakın olması UX olarak daha iyi olacaktır. */
+    justify-content: center;
+    
+    padding: 10px;
+    position: relative;
+}
+
+.navbar, a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px;
+}
+
+a {
+    transition: background-color 0.8s;
+    transition-property: background-color;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+
+    /* Animasyonda fare a etiketi üzerinden kaldırıldığında dikdörtgen halini alıyordu */
+    transition-property: border-radius;
+}
+
+a:hover {
+    background-color: brown;
+    border: 2px;
+    border-radius: 6px;
+    color: white;
+    
+    /* underline kullanım eski bir görünüm olduğu için none olması daha iyi olur diye düşündüm. Tercih meselesi tabii :) */
+    text-decoration: none;
+}
+
+.raven {
+    background-color: brown;
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+
+    /* Resim belirtilen ölçeklerde küçültülür veya büyütülürse kendi oranlarını koruyabilsin. */
+    object-fit: contain; 
+}
+
+.love {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    width: auto;
+    border: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+#lovecraftv {
+    position: fixed;
+    bottom: 0;
+}
+
+h2 {
+    text-align: center;
+    display: block;
+}
+
+.book {
+    width: 95px;
+    cursor: pointer;
+    transition-property: margin;
+    transition-duration: 1.2s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.books {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-left: 115px;
+    margin-left: 50px;
+}
+
+.column {
+    flex: 20%;
+    padding: 50px;
+}
+
+.book:hover {
+    margin: 5px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
