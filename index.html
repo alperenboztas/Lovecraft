@@ -5,45 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gothic Stories</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- Bu alandaki meta taglar'ı SEO için önemli --> 
+
+    <!-- Description meta tag'i web sitenin içeriği hakkında bilgi verir. -->
+    <meta name="description" content="Gothic Stories is a web application.">
+
+    <!-- Keywords ile web sitesi hakkındaki anahtar kelimeler belirlenir. -->
+    <meta name="keywords" content="gothic, raven, lovecraft, story"/>
+
+    <!-- robots ile robotların websitesi üzerinde gezinip gezinmeyeceği belirtilir. -->
+    <meta name="robots" content="index, follow">
+
+    <!-- author ile yazar belirtilir. Bu alanda kişisel web siteleri dışında developer isminin kullanılması pek önerilmez. -->
+    <meta name="author" content="Gothic Stories">
 </head>
 <body>
     <video autoplay muted loop id="lovecraftv">
-        <source src="lovecraftv.mp4" type="video/mp4">
+        <source src="./assets/videos/lovecraftv.mp4" type="video/mp4">
     </video>
 
     <div class="navbar">
-        <img src="raven.png" alt="" class="raven">
+        <img src="./assets/images/raven.png" alt="" class="raven">
         <a href="">Lovecraft's Life</a>
         <a href="">Books</a>
         <a href="">His signature</a>
         <a href="">Contact</a>
-        <a href="">Footer</a>
-
+        <!-- content arttığında (scrollbar görünmeye başladığında) kullanıcı bu link üzerine tıklarsa footer alanına gönderilir. -->
+        <a href="#footer">Footer</a>
     </div>
 
     <div class="life">
-        <img src="lovecraft.jpg" alt="Lovecraft's photo" class="love">
-        <h2>H.P Lovecraft's Story</h2>
-        <p>H. P. Lovecraft was many things: a recluse, a virulently xenophobic racist, and arguably the most influential figure in modern horror fiction. Lovecraft, who made very little money from his writing and often seemed to sabotage any possibility that he might, took a genre that was still bound to Victorian and Gothic tropes and rules and introduced into it a truly frightening concept: That the universe wasn’t filled with rule-obeying evil you could comprehend and thus defeat; rather, it was filled with beings and forces so beyond us they aren’t even aware of our existence as they terrify, destroy, and annihilate us.
-
-            Lovecraft spent his life living on the margins, suffering increasingly dire financial constraints as his writing career, once promising, floundered and finally failed utterly. When he died in 1937, he was a fringe figure in literature, but over the years his stories and ideas influenced countless other writers. Today the word "Lovecraftian" has become part of our literary language and his stories continue to be adapted and reprinted while many of his contemporaries, more famous at the time, have faded from memory.</p>
+        <img src="./assets/images/lovecraft.jpg" alt="Lovecraft's photo" class="love">
         
-        
+        <!-- semantic kurallar nedeniyle document üzerinde kullanılan ilk heading tag'i h1 olmalıdır.-->
+        <h1 class="title">H.P Lovecraft's Story</h1>
+        <!-- paragraf gibi text kullanılan alanların article içerisinde olması daha kullanışlı bir yapı olacaktır. -->
+        <article class="story">
+            <p class="content">
+                H. P. Lovecraft was many things: a recluse, a virulently xenophobic racist, and arguably the most influential figure in modern horror fiction. Lovecraft, who made very little money from his writing and often seemed to sabotage any possibility that he might, took a genre that was still bound to Victorian and Gothic tropes and rules and introduced into it a truly frightening concept: That the universe wasn’t filled with rule-obeying evil you could comprehend and thus defeat; rather, it was filled with beings and forces so beyond us they aren’t even aware of our existence as they terrify, destroy, and annihilate us.
+            </p>
+            <p class="content"> 
+                Lovecraft spent his life living on the margins, suffering increasingly dire financial constraints as his writing career, once promising, floundered and finally failed utterly. When he died in 1937, he was a fringe figure in literature, but over the years his stories and ideas influenced countless other writers. Today the word "Lovecraftian" has become part of our literary language and his stories continue to be adapted and reprinted while many of his contemporaries, more famous at the time, have faded from memory.
+            </p>
+        </article>
     </div>
 
     <div class="books">
 
         <h2> Some of H.P Lovecraf's Books</h2>
-        <img src="book1.jpg" alt="" class="book">
-        <img src="book2.jpg" alt="" class="book">
-        <img src="book3.jpg" alt="" class="book">
-        <img src="book4.jpg" alt="" class="book">
+        <img src="./assets/images/books/book1.jpg" alt="" class="book">
+        <img src="./assets/images/books/book2.jpg" alt="" class="book">
+        <img src="./assets/images/books/book3.jpg" alt="" class="book">
+        <img src="./assets/images/books/book4.jpg" alt="" class="book">
 
     </div>
 
-   
-    
+    <!-- Bu alana bir footer ekledim. -->
+    <footer class="footer" id="footer">
+        <p>Copyright &copy; 2022 </p>
+    </footer>
 </body>
 </html>
